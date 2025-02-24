@@ -5,6 +5,7 @@
     <title>Firm site</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css" integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,21 +18,21 @@
     <nav>
         <div class="navbar">
             <i class='bx bx-menu'></i>
-            <div class="logo"><a href="#">Firm site</a></div>
+            <div class="logo"><a href="#">P&S WYKOŃCZENIA</a></div>
             <div class="nav-links">
                 <div class="sidebar-logo">
-                <span class="logo-name">Firm site</span>
+                <span class="logo-name">P&S WYKOŃCZENIA</span>
                 <i class='bx bx-x' ></i>
                 </div>
                 <ul class="links">
                     <li><a href="#">STRONA GŁÓWNA</a></li>
                     <li>
                     <a href="#">PRACE</a>
-                    <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-                    <ul class="htmlCss-sub-menu sub-menu">
-                        <li><a href="#">PODSTRONA1</a></li>
-                        <li><a href="#">PODSTRONA2</a></li>
-                        <li><a href="#">PODSTRONA3</a></li>
+                    <i class='bx bxs-chevron-down work-arrow arrow  '></i>
+                    <ul class="work-sub-menu sub-menu">
+                        <li><a href="#">Wykończenia wnętrz</a></li>
+                        <li><a href="#">Wykończenia zewnątrz</a></li>
+                        <li><a href="#">Prace ziemne</a></li>
                         <li class="more">
                             <span><a href="#">WIECEJ</a>
                                 <i class='bx bxs-chevron-right arrow more-arrow'></i>
@@ -46,8 +47,8 @@
                     </li>
                     <li>
                     <a href="#">GALERIA</a>
-                    <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                    <ul class="js-sub-menu sub-menu">
+                    <i class='bx bxs-chevron-down gallery-arrow arrow '></i>
+                    <ul class="gallery-sub-menu sub-menu">
                         <li><a href="#">PODSTRONA1</a></li>
                         <li><a href="#">PODSTRONA2</a></li>
                         <li><a href="#">PODSTRONA3</a></li>
@@ -61,13 +62,12 @@
         </div>
     </nav>
     <section class="banner_slider">
-
         <div class="slide">
             <div class="slide_content">
-                <p> Lorem ipsum</p>
-                <h2>Lorem ipsum dolor sit, amet consectetur </h2>
+                <p>Paweł & Seweryn</p>
+                <h2>Wykończenia wnętrz</h2>
                 <div class="button_wrap">
-                    <a href="#" class="btn btn_transparent">btn1</a>
+                    <a href="#" class="btn btn_transparent">Dowiedz się wiecej</a>
                     <a href="#" class="btn ">btn2</a>
                 </div>
             </div>
@@ -75,10 +75,10 @@
 
         <div class="slide slide_two">
             <div class="slide_content">
-                <p>xdxdxd</p>
-                <h2>Lorem ipsum dolor sit, amet consectetur </h2>
+                <p>Paweł & Seweryn</p>
+                <h2>Wykończenia zewnątrz</h2>
                 <div class="button_wrap">
-                    <a href="#" class="btn btn_transparent">btn1</a>
+                    <a href="#" class="btn btn_transparent">Dowiedz się wiecej</a>
                     <a href="#" class="btn ">btn2</a>
                 </div>
             </div>
@@ -86,10 +86,10 @@
 
         <div class="slide slide_three">
             <div class="slide_content">
-                <p>xdxdxd</p>
-                <h2>Lorem ipsum dolor sit, amet consectetur </h2>
+                <p>Paweł & Seweryn</p>
+                <h2>Wykończeniowe prace ziemne</h2>
                 <div class="button_wrap">
-                    <a href="#" class="btn btn_transparent">bnt1</a>
+                    <a href="#" class="btn btn_transparent">Poznaj ofertę</a>
                     <a href="#" class="btn ">bnt2</a>
                 </div>
             </div>
@@ -100,9 +100,17 @@
     <div class="text_section2">
         <div class="text_section2_inner">
             <div class="text_section2_square">
-                <p>P&S <br> Usługi wykończeniowe i wykończeniowe prace ziemne</p>
+                <p1>P&S <br> Usługi wykończeniowe</p1>
             </div>
             <p>zrobic licznik ile lat doswiaczenia Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolor eum facere similique aspernatur doloribus temporibus, optio repellendus dolores quidem voluptatem tenetur amet reprehenderit! Quo deserunt veritatis ex aut qui?</p>
+        </div>
+        <div class="exp_counter">
+            <div class="exp_counter_inner">
+                <div class="odometer_number">
+                    <div class="exp_odometer odometer">0</div>
+                </div>
+                <div class="odometer_text">lat doświadczenia</div>
+            </div>
         </div>
     </div>
 
@@ -127,7 +135,7 @@
     
     <div class="text_section">
         <div class="text_section_inner">
-            <h1>P&S WYKOŃCZENIA</h1>
+            <h1><br>P&S<br> WYKOŃCZENIOWE PRACE ZIEMNE</h1>
             <p>Lorem ipsum dolor sit, amet consectetur Lorem ipsum dolor sit, amet consectetur
                 Lorem ipsum dolor sit, amet consectetur Lorem ipsum dolor sit, amet consectetur
                 Lorem ipsum dolor sit, amet consectetur Lorem ipsum dolor sit, amet consectetur
@@ -214,7 +222,7 @@
         </div>
     </footer>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js" integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="script.js"></script>

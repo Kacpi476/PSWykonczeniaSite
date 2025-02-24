@@ -9,16 +9,16 @@ navLinks.style.left = "0";
 menuCloseBtn.onclick = function() {
     navLinks.style.left = "-100%";
 }
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
+let workArrow = document.querySelector(".work-arrow");
+workArrow.onclick = function() {
     navLinks.classList.toggle("show1");
 }
 let moreArrow = document.querySelector(".more-arrow");
 moreArrow.onclick = function() {
     navLinks.classList.toggle("show2");
 }
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
+let galleryArrow = document.querySelector(".gallery-arrow");
+galleryArrow.onclick = function() {
     navLinks.classList.toggle("show3");
 }
 
@@ -118,3 +118,34 @@ document.addEventListener("mouseup", stopDragging);
 carousel.addEventListener("touchend", stopDragging);
 // Initial setup
 toggleArrowIcons();
+
+
+
+//odometer
+
+const createOdometer = (el,value) => {
+    const odometer = new Odometer({
+        el: el,
+        value: 0,
+    });
+    let hasRun = false
+
+    const options = {
+        threshold:[0,0.9],
+    }
+    const callback=(entries,observer) =>{
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                if(!hasRun){
+                    odometer.update(value)
+                    hasRun = true;
+                }
+            }
+        })
+    }
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(el)
+};
+
+const expOdometer = document.querySelector(".exp_odometer")
+createOdometer(expOdometer, 7)
