@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -12,7 +12,8 @@ body{
     background-repeat: no-repeat;
     background-position: left;
     background-position-y: -50px;
-    min-height: 100vh;
+    min-height: 100% !important;
+    height: 100% !important;
 }
 
 :root{
@@ -52,6 +53,16 @@ nav .navbar{
     text-decoration: none;
     font-weight: 600;
 }
+
+/* hover */
+.navbar .logo a:hover{
+    border-bottom: 1 solid var(--navy);
+    color: var(--navy);
+}
+
+
+
+
 nav .navbar .nav-links{
     line-height: 70px;
     height: 100%;
@@ -267,7 +278,7 @@ nav .navbar .nav-links{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -290,6 +301,8 @@ nav .navbar .nav-links{
     border-width: 4px 4px 0 4px;
     border-color: var(--primary);
     border-style: solid;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 10px;
 }
 .slide_content p {
     font-size: 18px;
@@ -501,24 +514,32 @@ section .banner_slider .slick-dots li{
     color: var(--primary);
     text-align: center;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding: 0 150px 0 150px;
+    padding: 0 150px 0px 150px;
 }
-.text_section_inner h1{
-    font-size: 50px;
+.text_section h1{
+    font-size: 3vw;
     border-bottom: solid var(--primary);
+    padding: 10px !important;
 }
-.text_section_inner p{
-    padding-top: 10px;
-    padding-bottom: 10px;
+.text_section p{
+    padding: 10px;
+    padding-bottom: 50px;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .text_section {
         height: 100% !important;
+        padding: 0;
+    }
+    .text_section h1{
+        font-size: 30px;
     }
 }
+
+
 
 .text_section2 {
     width: 100%;
@@ -570,6 +591,7 @@ section .banner_slider .slick-dots li{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .odometer_number{
     height: 100px;
@@ -615,7 +637,6 @@ section .banner_slider .slick-dots li{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--primary);
     padding: 20px;
 }
 
@@ -623,55 +644,94 @@ section .banner_slider .slick-dots li{
     width: 100%;
     height: 100%;
     padding: 50px;
-    border-radius: 20px;
-    background-image: url('img/2_16_9.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 .main_page_title {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
+    height: 100%;
+    width: 50%;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2));
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     padding: 30px;
     color: white;
 }
 
-.main_page_title p {
-    font-size: 40px;
+.main_page_title h2 {
+    font-size: 2.5vw;
     line-height: 50px;
     margin-bottom: 15px;
 }
 
-.main_page_title h2 {
-    font-size: 20px;
+.main_page_title p {
+    font-size: 1vw;
     line-height: 28px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
+.main_page_punkty {
+    padding: 30px;
+}
+
+.main_page_punkty ul{
+    columns: 2;
+}
+.main_page_punkty li{
+    margin-right: 35px;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.main_page_photo {
+    width: 40%;
+    height: 100%;
+    background-image: url(img/kwadrat1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+
+
 /* Responsywność */
 @media (max-width: 768px) {
+    .main_page {
+        height: 100% ;
+    }
     .main_page_inner {
         align-items: center;
         text-align: center;
         padding: 20px;
+        flex-direction: column !important;
     }
 
     .main_page_title {
         width: 100%;
         align-items: center;
+    }
+    .main_page_photo{
+        width: 100%;
+    }
+    .main_page_title h2 {
+        font-size: 30px;
+        line-height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .main_page_title p {
+        font-size: 15px;
+    }
+    .main_page_punkty li {
+        font-size: 15px;
     }
 }
 .title_button {
@@ -693,12 +753,10 @@ section .banner_slider .slick-dots li{
     height: 70vh;
     padding: 10px;
     margin: 0 auto 0 auto;
-    background: #3E8DA8;
-    background-color: var(--navy);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 50px;
 }
 
 .work_section {
@@ -752,6 +810,7 @@ section .banner_slider .slick-dots li{
     .main_page_work{
         flex-direction: column !important;
         height: 75vh !important;
+        gap: 10px !important;
     }
     .work_section{
         flex-wrap: wrap !important;
@@ -878,7 +937,7 @@ section .banner_slider .slick-dots li{
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -887,7 +946,7 @@ section .banner_slider .slick-dots li{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 25%;
+    width: 20%;
     height: 100%;
     padding: 25px;
     color: var(--primary);
