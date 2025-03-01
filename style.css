@@ -48,23 +48,36 @@ nav .navbar{
     padding: 0 50px;
 }
 .navbar .logo a{
-    font-size: 30px;
+    font-size: 40px;
     color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
+    border-bottom: none;
+}
+
+
+#hide {
+    display: inline-flex;
+    max-width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width 1s ease-in-out;
+    font-size: 20px;
+    padding-left: 5px;
+}
+.navbar .logo a:hover #hide {
+    max-width: 100%;
 }
 
 /* hover */
-.navbar .logo a:hover{
-    border-bottom: 1 solid var(--navy);
+nav .navbar .links li a:hover  {
+    border-bottom: 3px solid var(--navy);
     color: var(--navy);
+    transition: all 0.3s ease;
 }
 
 
-
-
 nav .navbar .nav-links{
-    line-height: 70px;
     height: 100%;
     display: flex;
 }
@@ -93,7 +106,6 @@ nav .navbar .links li a{
     transform: rotate(180deg);
 }
 nav .navbar .links li .arrow{
-    /* background: red; */
     height: 100%;
     width: 22px;
     line-height: 70px;
@@ -104,7 +116,7 @@ nav .navbar .links li .arrow{
 }
 nav .navbar .links li .sub-menu{
     position: absolute;
-    top: 70px;
+    top: 100%;
     left: 0;
     line-height: 40px;
     background: white;
@@ -167,6 +179,9 @@ nav .navbar .links li a{
 
 
 @media (max-width:800px){
+#hide{
+    display: none;
+}
 nav{
     position: relative;
 }
@@ -286,6 +301,7 @@ nav .navbar .nav-links{
     padding-top: 80px;
 }
 
+
 .banner_slider .slide_two {
     background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(img/2_16_9.jpeg);
 }
@@ -303,7 +319,16 @@ nav .navbar .nav-links{
     border-style: solid;
     background-color: rgba(0, 0, 0, 0.5);
     padding-bottom: 10px;
+    z-index: 99;
+    transition: all 0.5s ease;
 }
+
+.content_glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .slide_content p {
     font-size: 18px;
     line-height: 25px;
@@ -573,7 +598,7 @@ section .banner_slider .slick-dots li{
     color: var(--primary);
 }
 .text_section2_inner p{
-    font-size: 30px;
+    font-size: 2vw;
     padding: 10px;
     
 }
@@ -625,7 +650,7 @@ section .banner_slider .slick-dots li{
         font-size: 30px;
     }
     .text_section2_inner p{
-        font-size: 20px;
+        font-size: 20px !important;
     }
 }
 
@@ -637,22 +662,34 @@ section .banner_slider .slick-dots li{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 50px;
+    color: white;
 }
 
 .main_page_inner {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-}
+    border-radius: 0px 20px 20px 0px;
+    transition: all 0.5s ease;
 
+}
+.main_page_inner:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--navy);
+    transition: all 0.5s ease;
+    border-radius: 20px;
+}
+.main_page_inner:hover .main_page_title{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px 0px 0px 20px;
+}
 .main_page_title {
     height: 100%;
-    width: 50%;
+    width: 60%;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2));
     display: flex;
     flex-direction: column;
@@ -660,20 +697,19 @@ section .banner_slider .slick-dots li{
     align-items: flex-start;
     padding: 30px;
     color: white;
+    transition: all 0.5s ease;
 }
 
 .main_page_title h2 {
     font-size: 2.5vw;
-    line-height: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .main_page_title p {
-    font-size: 1vw;
-    line-height: 28px;
+    font-size: 1.2vw;
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .main_page_punkty {
@@ -685,8 +721,8 @@ section .banner_slider .slick-dots li{
 }
 .main_page_punkty li{
     margin-right: 35px;
-    font-size: 1vw;
-    font-weight: 500;
+    font-size: 1.2vw;
+    font-weight: 300;
 }
 
 .main_page_photo {
@@ -697,6 +733,7 @@ section .banner_slider .slick-dots li{
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0px 20px 20px 0px;
+    transition: all 0.5s ease;
 }
 
 
@@ -710,8 +747,8 @@ section .banner_slider .slick-dots li{
     .main_page_inner {
         align-items: center;
         text-align: center;
-        padding: 20px;
         flex-direction: column !important;
+        border-radius: 20px;
     }
 
     .main_page_title {
@@ -767,6 +804,21 @@ section .banner_slider .slick-dots li{
     justify-content: center;
     background-color: var(--grey);
     border-radius: 20px ;
+    transition: all 0.5s ease;
+}
+
+.work_section:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--navy);
+    background-color: var(--navy);
+}
+.work_section:hover p1 {
+    border-bottom: solid 1px white;
+    transition: all 1s ease;
+}
+.work_section p1:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
 }
 
 .work_section_text {
@@ -799,9 +851,10 @@ section .banner_slider .slick-dots li{
 }
 .work_section_text p{
     font-size: 15px;
+    padding-bottom: 20px;
 }
 .work_section_text p1{
-    padding-top: 20px;
+    padding: 5px;
     border-bottom: 1px solid var(--navy);
     cursor: pointer;
 }
