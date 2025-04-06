@@ -929,7 +929,7 @@ section .banner_slider .slick-dots li{
 }
 
 .carousel img{
-    height: 400px;
+    height: 500px;
     object-fit: cover;
     user-select: none;
     margin-left: 14px;
@@ -1024,7 +1024,8 @@ section .banner_slider .slick-dots li{
 }
 
 .gallery_carousel img{
-    height: 400px;
+    height: 500px;
+    min-height: 400px;
     object-fit: cover;
     user-select: none;
     margin-left: 14px;
@@ -1129,6 +1130,7 @@ section .banner_slider .slick-dots li{
 /* CONTACT PAGE */
 
 .section_contact {
+    height: 100vh;
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1176,7 +1178,6 @@ section .banner_slider .slick-dots li{
 
 .contact-info-item {
     display: flex;
-    margin-bottom: 30px;
     align-items: center;
 }
 
@@ -1285,6 +1286,10 @@ section .banner_slider .slick-dots li{
     .contact-info {
         margin-bottom: 40px;
         width: 100%;
+    }
+
+    .contact-info-item{
+        margin-bottom: 30px;
     }
     
     .contact-form {
@@ -1399,7 +1404,7 @@ section .banner_slider .slick-dots li{
 .work_row_img {
     width: 50%;
     height:100%;
-    max-height: 500px;
+    max-height: 600px;
     margin: 50px;
     aspect-ratio: 1/1;
     background-image: url(img/work/work1.JPG);
@@ -1564,6 +1569,7 @@ section .banner_slider .slick-dots li{
     flex-direction: row;
     color: var(--primary);
     color: black;
+    padding: 0 50px 0 50px;
 }
 
 .prace_row_img {
@@ -1576,6 +1582,9 @@ section .banner_slider .slick-dots li{
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.13),
+0px 1px 1px 0px rgba(0,0,0,0.11);
 }
 .prace_img2{
     background-image: url(img/prace/img2.png);
