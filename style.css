@@ -893,13 +893,13 @@ section .banner_slider .slick-dots li{
 
 .main_page_latestwork {
     width: 100%;
-    height: 80vh;
+    height: 100%;
 }
 .latestwork_carousel{
     display: flex;
     padding: 0 35px;
-    height: 80vh;
-    min-height: 70vh;
+    height: 90vh;
+    min-height: 80vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
