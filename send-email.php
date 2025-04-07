@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "twojemail@domena.pl";  // zmienic email
+    $to = "pawelseweryn@pswykonczenia.pl";  // zmienic email
     $subject = "Nowa wiadomość od: $name";
     $headers = "Od: $email\r\n";
     $headers .= "Content-Type: text/plain; charset=utf-8\r\n";

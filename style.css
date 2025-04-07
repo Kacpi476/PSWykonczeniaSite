@@ -487,7 +487,7 @@ section .banner_slider .slick-dots li{
         height: 50vh;
     }
     .slide_content{
-        margin-top: 100px;
+        margin-top: 60px;
     }
     .button_wrap{
         max-width: 200px;
@@ -666,6 +666,11 @@ section .banner_slider .slick-dots li{
     }
     .odometer_text {
         font-size: 20px !important;
+    }
+}
+@media (max-width: 400px) {
+    .text_section2_square p {
+        font-size: 30px;
     }
 }
 
@@ -876,7 +881,7 @@ section .banner_slider .slick-dots li{
 @media (max-width: 768px){
     .main_page_work{
         flex-direction: column !important;
-        height: 75vh !important;
+        height: 115vh !important;
         gap: 10px !important;
     }
     .work_section{
@@ -1130,7 +1135,7 @@ section .banner_slider .slick-dots li{
 /* CONTACT PAGE */
 
 .section_contact {
-    height: 100vh;
+    height: 100%;
     position: relative;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1143,6 +1148,7 @@ section .banner_slider .slick-dots li{
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: var(--navy);
 }
 
 .container_contact p {
@@ -1170,10 +1176,12 @@ section .banner_slider .slick-dots li{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--navy);
 }
 
 .contact-info {
     width: 50%;
+    background-color: var(--navy);
 }
 
 .contact-info-item {
@@ -1200,13 +1208,14 @@ section .banner_slider .slick-dots li{
 
 .contact-info-content h4 {
     color: white;
-    font-size: 1.4em;
+    font-size: 2em;
     margin-bottom: 5px;
 }
 
 .contact-info-content p {
     color: #FFF;
     font-size: 1em;
+    text-decoration: none;
 }
 
 .contact-form {
@@ -1272,7 +1281,7 @@ section .banner_slider .slick-dots li{
     color: var(--navy);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 784px) {
     .section_contact {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -1281,6 +1290,7 @@ section .banner_slider .slick-dots li{
     .row {
         flex-direction: column-reverse;
         gap: 20px;
+        background-color: var(--navy);
     }
     
     .contact-info {
@@ -1294,6 +1304,13 @@ section .banner_slider .slick-dots li{
     
     .contact-form {
         width: 100%;
+    }
+    
+    .contact-info-content p {
+        font-size: 0.7em;
+    }
+    .contact-info-content h4 {
+        font-size: 1.4em;
     }
 }
 
@@ -1354,6 +1371,13 @@ section .banner_slider .slick-dots li{
         height: 80%;
         padding: 20px;
         border-radius: 0;
+    }
+    .about_header{
+        font-size:25px;
+    }
+    .about_text{
+        font-size:18px;
+    }
     }
 }
 
